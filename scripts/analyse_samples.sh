@@ -20,7 +20,7 @@ then
     echo
     echo "Running MultiQC..."
     mkdir -p ~/testsim/out/multiqc
-    multiqc -o ~/testsim/out/multiqc
+    multiqc -o ~/testsim/out/multiqc ~/testsim
     echo
 else
     echo "Usage: $0 <sampleid>"
