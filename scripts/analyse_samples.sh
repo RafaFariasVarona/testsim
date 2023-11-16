@@ -18,6 +18,10 @@ then
     mkdir -p ~/testsim/out/star/${sampleid}
     STAR --runThreadN 4 --genomeDir ~/testsim/res/genome/star_index/ --readFilesIn ~/testsim/out/cutadapt/${sampleid}_1.trimmed.fastq.gz ~/testsim/out/cutadapt/${sampleid}_2.trimmed.fastq.gz --readFilesCommand zcat --outFileNamePrefix ~/testsim/out/star/${sampleid}/
     echo
+    echo "Running MultiQC..."
+    mkdir -p ~/testsim/out/multiqc
+    multiqc -o ~/testsim/out/multiqc
+    echo
 else
     echo "Usage: $0 <sampleid>"
     exit 1
